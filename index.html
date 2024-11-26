@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated Satellite Communication and Disaster Alert System</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Additional styles */
+        body {
+            background-image: url('https://www.ndrf.gov.in/sites/all/themes/ndrf/images/ndrf_logo_png.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #news-app {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#disaster-alerts">Disaster Alerts</a></li>
+                <li><a href="#emergency-buttons">Emergency Buttons</a></li>
+                <li><a href="#map-integration">Map Integration</a></li>
+                <li><a href="#satellite-communication">Satellite Communication</a></li>
+                <li><a href="#" id="government-link">Government Integration</a></li>
+            </ul>
+        </nav>
+        <button class="sos-button">SOS</button>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to the Integrated Satellite Communication and Disaster Alert System</h1>
+        <p>This system provides uninterrupted communication and life-saving alerts to people in disaster-hit areas.</p>
+    </section>
+
+    <section id="disaster-alerts">
+        <h2>Disaster Alerts</h2>
+        <!-- Disaster alerts content -->
+    </section>
+
+    <section id="emergency-buttons">
+        <h2>Emergency Buttons</h2>
+        <!-- Emergency buttons content -->
+    </section>
+
+    <section id="map-integration">
+        <h2>Map Integration</h2>
+        <img src="https://developers.google.com/static/codelabs/maps-platform/full-stack-store-locator/img/58a6680e9c8e7396.png" alt="Map">
+    </section>
+
+    <section id="satellite-communication">
+        <h2>Satellite Communication</h2>
+        <p>This system uses satellite communication to ensure continuous communication during disasters.</p>
+        <!-- Satellite communication content -->
+    </section>
+
+    <!-- Hidden News App Section -->
+    <section id="news-app">
+        <nav>
+            <div class="main-nav container flex">
+                <a href="#" onclick="reload()" class="company-logo">
+                    <img src="./assets/logo.png" alt="company logo">
+                </a>
+                <div class="nav-links">
+                    <ul class="flex">
+                        <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                        <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                        <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    </ul>
+                </div>
+                <div class="search-bar flex">
+                    <input id="search-text" type="text" class="news-input" placeholder="e.g. disasters">
+                    <button id="search-button" class="search-button">Search</button>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="cards-container container flex" id="cards-container">
+                <!-- News cards will be displayed here -->
+            </div>
+        </main>
+
+        <template id="template-news-card">
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title">This is the Title</h3>
+                    <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                    <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </template>
+
+        <script src="index.js"></script>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Integrated Satellite Communication and Disaster Alert System</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle the display of the news app section
+        document.getElementById('government-link').addEventListener('click', function () {
+            document.getElementById('news-app').style.display = 'block';
+            window.scrollTo(0, document.getElementById('news-app').offsetTop); // Scroll to the section
+        });
+    </script>
+</body>
+
+</html>
